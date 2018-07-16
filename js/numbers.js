@@ -11,6 +11,7 @@ function checkPrime()
                 flag=false;
                 break;
             }
+     
                if(flag){
                    
             showResult("Number:" +num+ " is prime");}
@@ -67,6 +68,67 @@ function fibonacci()
         }
       showResult("fibonacci of " +num+ " is :"+output);
 }
+function reverse()
+{
+     var num=getUserInput();
+    var rev=0;
+    var r;
+    while(num!=0)
+        {
+            r=num%10;
+            rev=(rev*10)+r;
+            num=Math.floor(num/10);
+            }
+    
+     showResult("reverse is :"+rev);
+    
+}
+function palindrome()
+{
+   var num1=getUserInput();
+    var rev=0;
+var num2=num1;
+    while(num1!=0)
+        {
+   r= Math.floor(num1%10);
+            rev=rev*10+r;
+      num1=Math.floor(num1/10);
+        }
+           
+            if(num2==rev)
+              
+        
+      showResult("its a palindrome"); 
+              
+    else
+          showResult("its not a palindrome"); 
+        
+}
+
+function sumsingledigit()
+{
+    var num=getUserInput();
+   var sum=num;
+    while(num>9)
+        {
+            sum= Math.floor(num/10)+num%10;
+            num=sum;
+           
+        }
+     showResult("sumofdigit is :"+sum); 
+}
+function sumdigit()
+{
+    var num=getUserInput();
+    var sum=0;
+    while(num!=0)
+        {
+            sum+=num%10;
+        num=Math.floor(num/10);
+        }
+     showResult("sumofdigit is :"+sum); 
+}
+
 
 
 function getUserInput(){
